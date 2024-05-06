@@ -4,20 +4,18 @@ const { data, refresh, pending } = await useFetch(config.public.wordpressUrl, {
   method: "get",
   query: {
     query: `query NewQuery {
-        posts{
-          nodes {
-            title
-            date
-            excerpt
-        content
-          }
-        }
-      
-      }`,
+  page(id: "cG9zdDozODM=") {
+      title
+      date
+      content
+    }
+  }`,
   },
   transform(data: any) {
-    return data.data.posts.nodes as Array<
-      Record<"title" | "date" | "excerpt" | "uri" | "content", string>
+    console.log(data);
+
+    return data.data.page as Array<
+      Record<"title" | "date" | "content", string>
     >;
   },
 });
@@ -26,11 +24,11 @@ const { data, refresh, pending } = await useFetch(config.public.wordpressUrl, {
   <TheHeader></TheHeader>
 
   <div class="mx-auto max-w-7xl">
-    <Post v-for="post in data">
+    <div v-for="page in data">
       <h1 class="my-4 text-2xl">
-        {{ post.title }}
+        {{ page.title }}
       </h1>
-      <div class="my-3" v-html="post.content"></div>
-    </Post>
+      <div class="my-3" v-html="page.content"></div>
+    </div>
   </div>
 </template>
