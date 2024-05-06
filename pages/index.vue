@@ -3,20 +3,20 @@ const config = useRuntimeConfig();
 const { data, refresh, pending } = await useFetch(config.public.wordpressUrl, {
   method: "get",
   query: {
-    query: `query NewQuery {
-  page(id: "cG9zdDozODM=") {
+    query: `query GetPosts {
+  page (id:"cG9zdDozODM="){
+      id
       title
       date
       content
-    }
-  }`,
+    
+  }
+}`,
   },
   transform(data: any) {
-    console.log(data);
-
-    return data.data.page as Array<
-      Record<"title" | "date" | "content", string>
-    >;
+    return data.data as {
+      page: { id: string; title: string; date: string; content: string };
+    };
   },
 });
 </script>
@@ -24,11 +24,11 @@ const { data, refresh, pending } = await useFetch(config.public.wordpressUrl, {
   <TheHeader></TheHeader>
 
   <div class="mx-auto max-w-7xl">
-    <div v-for="page in data">
+    <!-- <Post v-for="post in data">
       <h1 class="my-4 text-2xl">
-        {{ page.title }}
+        {{ post.title }}
       </h1>
-      <div class="my-3" v-html="page.content"></div>
-    </div>
+    </Post> -->
+    <div class="my-3" v-html="data?.page.content"></div>
   </div>
 </template>
