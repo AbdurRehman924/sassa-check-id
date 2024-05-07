@@ -1,0 +1,1091 @@
+/*! CSS Used from: https://sassachecker.co.za/wp-includes/css/dist/block-library/style.min.css ; media=all */
+@media all {
+  html :where([style*="border-top-color"]) {
+    border-top-style: solid;
+  }
+  html :where([style*="border-right-color"]) {
+    border-right-style: solid;
+  }
+  html :where([style*="border-bottom-color"]) {
+    border-bottom-style: solid;
+  }
+  html :where([style*="border-left-color"]) {
+    border-left-style: solid;
+  }
+  html :where([style*="border-top-width"]) {
+    border-top-style: solid;
+  }
+  html :where([style*="border-right-width"]) {
+    border-right-style: solid;
+  }
+  html :where([style*="border-bottom-width"]) {
+    border-bottom-style: solid;
+  }
+  html :where([style*="border-left-width"]) {
+    border-left-style: solid;
+  }
+}
+/*! CSS Used from: https://sassachecker.co.za/wp-content/themes/oceanwp/assets/css/style.min.css ; media=all */
+@media all {
+  h1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+  }
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  ::selection {
+    color: #fff;
+    background: #333;
+    text-shadow: none;
+  }
+  .clr:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    zoom: 1;
+    height: 0;
+  }
+  h1 {
+    font-weight: 600;
+    margin: 0 0 20px;
+    color: #333;
+    line-height: 1.4;
+  }
+  h1 {
+    font-size: 23px;
+  }
+  @media print {
+    * {
+      background: rgba(0, 0, 0, 0) !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+  }
+  .page-header-title {
+    display: block;
+    font-size: 24px;
+    line-height: 1.4em;
+    font-weight: 400;
+    margin: 0;
+    color: #333;
+  }
+  @media only screen and (max-width: 959px) {
+    body.has-breadcrumbs .page-header-title {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    body.has-breadcrumbs .page-header-title {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+/*! CSS Used from: https://sassachecker.co.za/wp-content/plugins/ocean-gutenberg-blocks/assets/css/ogb-style.min.css ; media=all */
+@media all {
+  .clr:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    zoom: 1;
+    height: 0;
+  }
+}
+/*! CSS Used from: https://sassachecker.co.za/wp-content/uploads/oceanwp/custom-style.css ; media=all */
+@media all {
+  h1 {
+    color: #000000;
+  }
+  h1 {
+    font-size: 26px;
+    color: #000000;
+  }
+  .page-header .page-header-title {
+    font-weight: 800;
+    font-style: normal;
+    font-size: 36px;
+    text-transform: capitalize;
+  }
+}
+/*! CSS Used from: Embedded */
+h1 {
+  cursor: auto;
+  user-select: text !important;
+}
+::selection {
+  background-color: #338fff !important;
+  color: #fff !important;
+}
+
+/*! CSS Used from: https://sassachecker.co.za/wp-includes/css/dist/block-library/style.min.css ; media=all */
+@media all {
+  .wp-block-table {
+    overflow-x: auto;
+  }
+  .wp-block-table table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .wp-block-table td {
+    border: 1px solid;
+    padding: 0.5em;
+  }
+  :where(figure) {
+    margin: 0 0 1em;
+  }
+}
+/*! CSS Used from: Embedded */
+.wp-block-table {
+  margin: 0 0 1em;
+}
+.wp-block-table td {
+  word-break: normal;
+}
+/*! CSS Used from: https://sassachecker.co.za/wp-content/themes/oceanwp/assets/css/style.min.css ; media=all */
+@media all {
+  strong,
+  table,
+  tbody,
+  tr,
+  td,
+  figure {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+  }
+  figure {
+    display: block;
+  }
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  figure {
+    display: block;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  td {
+    font-weight: normal;
+    text-align: left;
+  }
+  ::selection {
+    color: #fff;
+    background: #333;
+    text-shadow: none;
+  }
+  figure {
+    display: block;
+  }
+  strong {
+    font-weight: 600;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  td {
+    padding: 0;
+  }
+  table {
+    width: 100%;
+    margin-bottom: 2.618em;
+  }
+  table td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #e9e9e9;
+  }
+  @media print {
+    * {
+      background: rgba(0, 0, 0, 0) !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+    tr {
+      page-break-inside: avoid;
+    }
+  }
+}
+/*! CSS Used from: Embedded */
+::selection {
+  background-color: #338fff !important;
+  color: #fff !important;
+}
+/*! CSS Used from: https://sassachecker.co.za/wp-content/themes/oceanwp/assets/css/style.min.css ; media=all */
+@media all {
+  p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+  }
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  ::selection {
+    color: #fff;
+    background: #333;
+    text-shadow: none;
+  }
+  p {
+    margin: 0 0 20px;
+  }
+  @media print {
+    * {
+      background: rgba(0, 0, 0, 0) !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+    p {
+      orphans: 3;
+      widows: 3;
+    }
+  }
+}
+/*! CSS Used from: Embedded */
+p {
+  user-select: text !important;
+}
+p {
+  cursor: auto;
+  user-select: text !important;
+}
+::selection {
+  background-color: #338fff !important;
+  color: #fff !important;
+}
+/*! CSS Used from: https://sassachecker.co.za/wp-includes/css/dist/block-library/style.min.css ; media=all */
+@media all {
+  ul {
+    box-sizing: border-box;
+  }
+}
+/*! CSS Used from: https://sassachecker.co.za/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css ; media=all */
+@media all {
+  #ez-toc-container {
+    background: #f9f9f9;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    display: table;
+    margin-bottom: 1em;
+    padding: 10px 20px 10px 10px;
+    position: relative;
+    width: auto;
+  }
+  #ez-toc-container ul ul {
+    margin-left: 1.5em;
+  }
+  #ez-toc-container li,
+  #ez-toc-container ul {
+    padding: 0;
+  }
+  #ez-toc-container li,
+  #ez-toc-container ul,
+  #ez-toc-container ul li {
+    background: 0 0;
+    list-style: none;
+    line-height: 1.6;
+    margin: 0;
+    overflow: hidden;
+    z-index: 1;
+  }
+  #ez-toc-container .ez-toc-title {
+    text-align: left;
+    line-height: 1.45;
+    margin: 0;
+    padding: 0;
+  }
+  .ez-toc-title-container {
+    display: table;
+    width: 100%;
+  }
+  .ez-toc-title,
+  .ez-toc-title-toggle {
+    display: inline;
+    text-align: left;
+    vertical-align: middle;
+  }
+  .ez-toc-btn {
+    display: inline-block;
+    font-weight: 400;
+  }
+  #ez-toc-container a {
+    color: #444;
+    box-shadow: none;
+    text-decoration: none;
+    text-shadow: none;
+    display: inline-flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
+  #ez-toc-container a:visited {
+    color: #9f9f9f;
+  }
+  #ez-toc-container a:hover {
+    text-decoration: underline;
+  }
+  #ez-toc-container a.ez-toc-toggle {
+    display: flex;
+    align-items: center;
+  }
+  .ez-toc-btn {
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+  .ez-toc-btn:focus {
+    outline: #333 dotted thin;
+    outline: -webkit-focus-ring-color auto 5px;
+    outline-offset: -2px;
+  }
+  .ez-toc-btn:focus,
+  .ez-toc-btn:hover {
+    color: #333;
+    text-decoration: none;
+  }
+  .ez-toc-btn:active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  }
+  .ez-toc-btn-default {
+    color: #333;
+    background-color: #fff;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      0 1px 1px rgba(0, 0, 0, 0.075);
+    text-shadow: 0 1px 0 #fff;
+    background-image: -webkit-gradient(
+      linear,
+      left 0,
+      left 100%,
+      from(#fff),
+      to(#e0e0e0)
+    );
+    background-image: -webkit-linear-gradient(top, #fff 0, #e0e0e0 100%);
+    background-image: -moz-linear-gradient(top, #fff 0, #e0e0e0 100%);
+    background-image: linear-gradient(to bottom, #fff 0, #e0e0e0 100%);
+    background-repeat: repeat-x;
+    border-color: #ccc;
+  }
+  .ez-toc-btn-default:active,
+  .ez-toc-btn-default:focus,
+  .ez-toc-btn-default:hover {
+    color: #333;
+    background-color: #ebebeb;
+    border-color: #adadad;
+  }
+  .ez-toc-btn-default:active {
+    background-image: none;
+    background-color: #e0e0e0;
+    border-color: #dbdbdb;
+  }
+  .ez-toc-btn-xs {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+  }
+  .ez-toc-btn-xs {
+    padding: 1px 5px;
+  }
+  .ez-toc-btn-default:active {
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  }
+  .ez-toc-btn:active {
+    background-image: none;
+  }
+  .ez-toc-btn-default:focus,
+  .ez-toc-btn-default:hover {
+    background-color: #e0e0e0;
+    background-position: 0 -15px;
+  }
+  .ez-toc-pull-right {
+    float: right !important;
+    margin-left: 10px;
+  }
+  #ez-toc-container .ez-toc-js-icon-con {
+    position: relative;
+    cursor: pointer;
+    display: initial;
+  }
+  #ez-toc-container .ez-toc-js-icon-con {
+    float: right;
+    position: relative;
+    font-size: 16px;
+    padding: 0;
+    border: 1px solid #999191;
+    border-radius: 5px;
+    cursor: pointer;
+    left: 10px;
+    width: 35px;
+  }
+  div#ez-toc-container .ez-toc-title {
+    display: initial;
+  }
+  #ez-toc-container a.ez-toc-toggle {
+    color: #444;
+    background: inherit;
+    border: inherit;
+  }
+  #ez-toc-container .eztoc-toggle-hide-by-default {
+    display: none;
+  }
+  .ez-toc-icon-toggle-span {
+    display: flex;
+    align-items: center;
+    width: 35px;
+    height: 30px;
+    justify-content: center;
+    direction: ltr;
+  }
+}
+/*! CSS Used from: Embedded */
+div#ez-toc-container .ez-toc-title {
+  font-size: 120%;
+}
+div#ez-toc-container .ez-toc-title {
+  font-weight: 500;
+}
+div#ez-toc-container ul li {
+  font-size: 95%;
+}
+div#ez-toc-container ul li {
+  font-weight: 500;
+}
+div#ez-toc-container nav ul ul li {
+  font-size: 90%;
+}
+/*! CSS Used from: https://sassachecker.co.za/wp-content/themes/oceanwp/assets/css/style.min.css ; media=all */
+@media all {
+  div,
+  span,
+  a,
+  ul,
+  li,
+  nav {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+  }
+  nav {
+    display: block;
+  }
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  nav {
+    display: block;
+  }
+  a:focus {
+    outline: solid 1px !important;
+  }
+  a:hover,
+  a:active {
+    outline: 0;
+  }
+  ::selection {
+    color: #fff;
+    background: #333;
+    text-shadow: none;
+  }
+  nav {
+    display: block;
+  }
+  a {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  a:active,
+  a:hover {
+    outline: 0;
+  }
+  svg:not(:root) {
+    overflow: hidden;
+  }
+  a {
+    color: #333;
+  }
+  a:hover {
+    color: #13aff0;
+  }
+  a,
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .page:not(.elementor-page):not(.woocommerce-page)
+    .entry
+    a:not(.wp-block-button__link):not(.wp-block-file__button) {
+    cursor: pointer;
+    text-underline-offset: 3px;
+    text-decoration: underline;
+    text-decoration-skip-ink: all;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .page:not(.elementor-page):not(.woocommerce-page)
+    .entry
+    a:not(.wp-block-button__link):not(.wp-block-file__button):hover {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-skip-ink: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .page:not(.elementor-page):not(.woocommerce-page)
+    .entry
+    a:not(.wp-block-button__link):not(.wp-block-file__button):focus:not(
+      .wp-block-button__link
+    ):not(.wp-block-file__button) {
+    outline: 2px solid rgba(0, 0, 0, 0);
+    text-decoration: underline 1px dotted #13aff0;
+    text-decoration-skip-ink: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  ul {
+    margin: 15px 0 15px 20px;
+  }
+  li ul {
+    margin: 0 0 0 25px;
+  }
+  @media print {
+    * {
+      background: rgba(0, 0, 0, 0) !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+    a[href]:after {
+      content: " (" attr(href) ")";
+    }
+    a[href^="#"]:after {
+      content: "";
+    }
+  }
+}
+/*! CSS Used from: Embedded */
+div,
+a,
+span {
+  user-select: text !important;
+}
+::selection {
+  background-color: #338fff !important;
+  color: #fff !important;
+}
+/*! CSS Used from: https://sassachecker.co.za/wp-content/themes/oceanwp/assets/css/style.min.css ; media=all */
+@media all {
+  span,
+  h3 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+  }
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  ::selection {
+    color: #fff;
+    background: #333;
+    text-shadow: none;
+  }
+  h3 {
+    font-weight: 600;
+    margin: 0 0 20px;
+    color: #333;
+    line-height: 1.4;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  @media print {
+    * {
+      background: rgba(0, 0, 0, 0) !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+    h3 {
+      orphans: 3;
+      widows: 3;
+    }
+    h3 {
+      page-break-after: avoid;
+    }
+  }
+}
+/*! CSS Used from: https://sassachecker.co.za/wp-content/uploads/oceanwp/custom-style.css ; media=all */
+@media all {
+  h3 {
+    color: #000000;
+  }
+  h3 {
+    font-size: 28px;
+    color: #000000;
+  }
+}
+/*! CSS Used from: Embedded */
+span {
+  user-select: text !important;
+}
+h3 {
+  cursor: auto;
+  user-select: text !important;
+}
+::selection {
+  background-color: #338fff !important;
+  color: #fff !important;
+}
+/*! CSS Used from: https://sassachecker.co.za/wp-content/themes/oceanwp/assets/css/style.min.css ; media=all */
+@media all {
+  strong {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+  }
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  ::selection {
+    color: #fff;
+    background: #333;
+    text-shadow: none;
+  }
+  strong {
+    font-weight: 600;
+  }
+  @media print {
+    * {
+      background: rgba(0, 0, 0, 0) !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+  }
+}
+/*! CSS Used from: Embedded */
+::selection {
+  background-color: #338fff !important;
+  color: #fff !important;
+}
+/*! CSS Used from: https://sassachecker.co.za/wp-includes/css/dist/block-library/style.min.css ; media=all */
+@media all {
+  html :where([style*="border-top-color"]) {
+    border-top-style: solid;
+  }
+  html :where([style*="border-right-color"]) {
+    border-right-style: solid;
+  }
+  html :where([style*="border-bottom-color"]) {
+    border-bottom-style: solid;
+  }
+  html :where([style*="border-left-color"]) {
+    border-left-style: solid;
+  }
+  html :where([style*="border-top-width"]) {
+    border-top-style: solid;
+  }
+  html :where([style*="border-right-width"]) {
+    border-right-style: solid;
+  }
+  html :where([style*="border-bottom-width"]) {
+    border-bottom-style: solid;
+  }
+  html :where([style*="border-left-width"]) {
+    border-left-style: solid;
+  }
+}
+/*! CSS Used from: https://sassachecker.co.za/wp-content/themes/oceanwp/assets/css/style.min.css ; media=all */
+@media all {
+  div,
+  h1,
+  header {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+  }
+  header {
+    display: block;
+  }
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  header {
+    display: block;
+  }
+  ::selection {
+    color: #fff;
+    background: #333;
+    text-shadow: none;
+  }
+  header {
+    display: block;
+  }
+  .container {
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  @media only screen and (max-width: 959px) {
+    .container {
+      max-width: 90%;
+    }
+  }
+  .clr:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    zoom: 1;
+    height: 0;
+  }
+  h1 {
+    font-weight: 600;
+    margin: 0 0 20px;
+    color: #333;
+    line-height: 1.4;
+  }
+  h1 {
+    font-size: 23px;
+  }
+  @media print {
+    * {
+      background: rgba(0, 0, 0, 0) !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+  }
+  .page-header {
+    position: relative;
+    background-color: #f5f5f5;
+    padding: 34px 0;
+  }
+  .page-header .container {
+    position: relative;
+  }
+  body.home .page-header-inner {
+    text-align: center;
+  }
+  .page-header-title {
+    display: block;
+    font-size: 24px;
+    line-height: 1.4em;
+    font-weight: 400;
+    margin: 0;
+    color: #333;
+  }
+  @media only screen and (max-width: 959px) {
+    body.has-breadcrumbs .page-header-title {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-header {
+      background-attachment: initial !important;
+    }
+    body.has-breadcrumbs .page-header-title {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+/*! CSS Used from: https://sassachecker.co.za/wp-content/plugins/ocean-gutenberg-blocks/assets/css/ogb-style.min.css ; media=all */
+@media all {
+  .clr:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    zoom: 1;
+    height: 0;
+  }
+}
+/*! CSS Used from: https://sassachecker.co.za/wp-content/uploads/oceanwp/custom-style.css ; media=all */
+@media all {
+  h1 {
+    color: #000000;
+  }
+  h1 {
+    font-size: 26px;
+    color: #000000;
+  }
+  .page-header .page-header-title {
+    font-weight: 800;
+    font-style: normal;
+    font-size: 36px;
+    text-transform: capitalize;
+  }
+}
+/*! CSS Used from: Embedded */
+div {
+  user-select: text !important;
+}
+h1 {
+  cursor: auto;
+  user-select: text !important;
+}
+::selection {
+  background-color: #338fff !important;
+  color: #fff !important;
+}
+/*! CSS Used from: https://sassachecker.co.za/wp-content/themes/oceanwp/assets/css/style.min.css ; media=all */
+@media all {
+  a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+  }
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  a:focus {
+    outline: solid 1px !important;
+  }
+  a:hover,
+  a:active {
+    outline: 0;
+  }
+  ::selection {
+    color: #fff;
+    background: #333;
+    text-shadow: none;
+  }
+  a {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  a:active,
+  a:hover {
+    outline: 0;
+  }
+  a {
+    color: #333;
+  }
+  a:hover {
+    color: #13aff0;
+  }
+  a,
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .page:not(.elementor-page):not(.woocommerce-page)
+    .entry
+    a:not(.wp-block-button__link):not(.wp-block-file__button) {
+    cursor: pointer;
+    text-underline-offset: 3px;
+    text-decoration: underline;
+    text-decoration-skip-ink: all;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .page:not(.elementor-page):not(.woocommerce-page)
+    .entry
+    a:not(.wp-block-button__link):not(.wp-block-file__button):hover {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-skip-ink: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .page:not(.elementor-page):not(.woocommerce-page)
+    .entry
+    a:not(.wp-block-button__link):not(.wp-block-file__button):focus:not(
+      .wp-block-button__link
+    ):not(.wp-block-file__button) {
+    outline: 2px solid rgba(0, 0, 0, 0);
+    text-decoration: underline 1px dotted #13aff0;
+    text-decoration-skip-ink: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  @media print {
+    * {
+      background: rgba(0, 0, 0, 0) !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+    a[href]:after {
+      content: " (" attr(href) ")";
+    }
+  }
+}
+/*! CSS Used from: Embedded */
+a {
+  user-select: text !important;
+}
+::selection {
+  background-color: #338fff !important;
+  color: #fff !important;
+}

@@ -9,7 +9,6 @@ const { data, refresh, pending } = await useFetch(config.public.wordpressUrl, {
       title
       date
       content
-    
   }
 }`,
   },
@@ -29,6 +28,26 @@ const { data, refresh, pending } = await useFetch(config.public.wordpressUrl, {
         {{ post.title }}
       </h1>
     </Post> -->
+    <h1>{{ data?.page.title }}</h1>
     <div class="my-3" v-html="data?.page.content"></div>
   </div>
 </template>
+
+<style>
+/* .wp-block-heading {
+  font-size: 40px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.wp-block-table {
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+}
+#ez-toc-container {
+  background-color: gray;
+} */
+</style>

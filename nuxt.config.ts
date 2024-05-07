@@ -6,5 +6,6 @@ export default defineNuxtConfig({
       wordpressUrl: "https://wpbackend.perceptiond.net/graphql",
     },
   },
+  css: ["@/assets/style.css"],
   devtools: { enabled: true },
 });
