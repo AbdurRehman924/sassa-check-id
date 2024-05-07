@@ -1,10 +1,21 @@
-<script setup lang="ts">
+<template>
+  <div class="mx-auto max-w-7xl my-3" v-html="data?.page.content"></div>
+</template>
+
+<script setup>
+import { defineProps } from "vue";
+const props = defineProps({
+  pages: Object,
+});
+
+let indexPage = props.pages.find((page) => page.node.isFrontPage === true);
 const config = useRuntimeConfig();
-const { data, refresh, pending } = await useFetch(config.public.wordpressUrl, {
+
+const { data } = await useFetch(config.public.wordpressUrl, {
   method: "get",
   query: {
     query: `query GetPosts {
-  page (id:"cG9zdDozODM="){
+  page (id:"${indexPage.node.id}"){
       id
       title
       date
@@ -12,27 +23,11 @@ const { data, refresh, pending } = await useFetch(config.public.wordpressUrl, {
   }
 }`,
   },
-  transform(data: any) {
-    return data.data as {
-      page: { id: string; title: string; date: string; content: string };
-    };
+  transform(data) {
+    return data.data;
   },
 });
 </script>
-<template>
-  <TheHeader></TheHeader>
-
-  <div class="mx-auto max-w-7xl">
-    <!-- <Post v-for="post in data">
-      <h1 class="my-4 text-2xl">
-        {{ post.title }}
-      </h1>
-    </Post> -->
-    <h1>{{ data?.page.title }}</h1>
-    <div class="my-3" v-html="data?.page.content"></div>
-  </div>
-</template>
-
 <style>
 /* .wp-block-heading {
   font-size: 40px;
