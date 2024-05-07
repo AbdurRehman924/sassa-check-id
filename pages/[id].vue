@@ -11,7 +11,7 @@ const props = defineProps({
   pages: Object,
 });
 
-let pageWithId = props.pages.find((page) => page.node.link.includes(id));
+let pageWithId = props.pages.find((page) => page.node.slug === id);
 
 const { data } = await useFetch(config.public.wordpressUrl, {
   method: "get",

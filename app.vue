@@ -17,6 +17,7 @@ const { data } = useFetch(config.public.wordpressUrl, {
         link
         id
         isFrontPage
+        slug
       }
     }
   }

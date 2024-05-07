@@ -2,11 +2,9 @@
   <footer class="bg-black text-white w-screen text-xl mx-auto p-4">
     <p class="text-xl">SASSA CHECKER</p>
     <div v-for="item in data" class="text-xs">
-      <a
-        v-if="item.node.isFrontPage === false"
-        :href="removeBaseUrl(item.node.link)"
-        >{{ item.node.title }}</a
-      >
+      <a v-if="item.node.isFrontPage === false" :href="item.node.slug">{{
+        item.node.title
+      }}</a>
     </div>
   </footer>
 </template>
@@ -23,6 +21,7 @@ const { data } = useFetch(config.public.wordpressUrl, {
         link
         id
         isFrontPage
+        slug
       }
     }
   }
@@ -32,11 +31,4 @@ const { data } = useFetch(config.public.wordpressUrl, {
     return data.data.pages.edges;
   },
 });
-
-const removeBaseUrl = (url) => {
-  const parts = url.split("/");
-  const lastPart = parts[parts.length - 2];
-
-  return lastPart;
-};
 </script>
