@@ -1089,3 +1089,599 @@ a {
   background-color: #338fff !important;
   color: #fff !important;
 }
+/*! CSS Used from: https://sassachecker.co.za/wp-includes/css/dist/block-library/style.min.css ; media=all */
+@media all {
+  ol {
+    box-sizing: border-box;
+  }
+}
+/*! CSS Used from: https://sassachecker.co.za/wp-content/themes/oceanwp/assets/css/style.min.css ; media=all */
+@media all {
+  a,
+  ol,
+  li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+  }
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  a:focus {
+    outline: solid 1px !important;
+  }
+  a:hover,
+  a:active {
+    outline: 0;
+  }
+  ::selection {
+    color: #fff;
+    background: #333;
+    text-shadow: none;
+  }
+  a {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  a:active,
+  a:hover {
+    outline: 0;
+  }
+  a {
+    color: #333;
+  }
+  a:hover {
+    color: #13aff0;
+  }
+  a,
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .page:not(.elementor-page):not(.woocommerce-page)
+    .entry
+    a:not(.wp-block-button__link):not(.wp-block-file__button) {
+    cursor: pointer;
+    text-underline-offset: 3px;
+    text-decoration: underline;
+    text-decoration-skip-ink: all;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .page:not(.elementor-page):not(.woocommerce-page)
+    .entry
+    a:not(.wp-block-button__link):not(.wp-block-file__button):hover {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-skip-ink: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .page:not(.elementor-page):not(.woocommerce-page)
+    .entry
+    a:not(.wp-block-button__link):not(.wp-block-file__button):focus:not(
+      .wp-block-button__link
+    ):not(.wp-block-file__button) {
+    outline: 2px solid rgba(0, 0, 0, 0);
+    text-decoration: underline 1px dotted #13aff0;
+    text-decoration-skip-ink: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  ol {
+    margin: 15px 0 15px 20px;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  @media print {
+    * {
+      background: rgba(0, 0, 0, 0) !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+    a[href]:after {
+      content: " (" attr(href) ")";
+    }
+  }
+}
+/*! CSS Used from: Embedded */
+a {
+  user-select: text !important;
+}
+::selection {
+  background-color: #338fff !important;
+  color: #fff !important;
+}
+/*! CSS Used from: https://sassachecker.co.za/wp-content/themes/oceanwp/assets/css/style.min.css ; media=all */
+@media all {
+  a,
+  li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+  }
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  a:focus {
+    outline: solid 1px !important;
+  }
+  a:hover,
+  a:active {
+    outline: 0;
+  }
+  ::selection {
+    color: #fff;
+    background: #333;
+    text-shadow: none;
+  }
+  a {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  a:active,
+  a:hover {
+    outline: 0;
+  }
+  a {
+    color: #333;
+  }
+  a:hover {
+    color: #13aff0;
+  }
+  a,
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .page:not(.elementor-page):not(.woocommerce-page)
+    .entry
+    a:not(.wp-block-button__link):not(.wp-block-file__button) {
+    cursor: pointer;
+    text-underline-offset: 3px;
+    text-decoration: underline;
+    text-decoration-skip-ink: all;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .page:not(.elementor-page):not(.woocommerce-page)
+    .entry
+    a:not(.wp-block-button__link):not(.wp-block-file__button):hover {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-skip-ink: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .page:not(.elementor-page):not(.woocommerce-page)
+    .entry
+    a:not(.wp-block-button__link):not(.wp-block-file__button):focus:not(
+      .wp-block-button__link
+    ):not(.wp-block-file__button) {
+    outline: 2px solid rgba(0, 0, 0, 0);
+    text-decoration: underline 1px dotted #13aff0;
+    text-decoration-skip-ink: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  @media print {
+    * {
+      background: rgba(0, 0, 0, 0) !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+    a[href]:after {
+      content: " (" attr(href) ")";
+    }
+  }
+}
+/*! CSS Used from: Embedded */
+a {
+  user-select: text !important;
+}
+::selection {
+  background-color: #338fff !important;
+  color: #fff !important;
+}
+/*! CSS Used from: https://sassachecker.co.za/wp-content/themes/oceanwp/assets/css/style.min.css ; media=all */
+@media all {
+  strong {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+  }
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  ::selection {
+    color: #fff;
+    background: #333;
+    text-shadow: none;
+  }
+  strong {
+    font-weight: 600;
+  }
+  @media print {
+    * {
+      background: rgba(0, 0, 0, 0) !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+  }
+}
+/*! CSS Used from: Embedded */
+::selection {
+  background-color: #338fff !important;
+  color: #fff !important;
+}
+
+/*Form styles */
+/*! CSS Used from: https://wpbackend.perceptiond.net/wp-content/themes/oceanwp/assets/css/style.min.css?ver=3.5.5 ; media=all */
+@media all {
+  div,
+  span,
+  form,
+  label {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+  }
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  ::selection {
+    color: #fff;
+    background: #333;
+    text-shadow: none;
+  }
+  button,
+  input,
+  textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+  }
+  button {
+    overflow: visible;
+  }
+  button {
+    text-transform: none;
+  }
+  button {
+    -webkit-appearance: button;
+    cursor: pointer;
+  }
+  input {
+    line-height: normal;
+  }
+  textarea {
+    overflow: auto;
+  }
+  @media print {
+    * {
+      background: rgba(0, 0, 0, 0) !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+  }
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    display: inline-block;
+    min-height: 40px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.8;
+    padding: 6px 12px;
+    vertical-align: middle;
+    background-color: rgba(0, 0, 0, 0);
+    color: #333;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    -webkit-appearance: none;
+  }
+  form textarea {
+    min-height: 150px;
+    line-height: 1.5;
+    resize: vertical;
+  }
+  form input[type="text"]:focus,
+  form input[type="email"]:focus,
+  form textarea:focus {
+    border-color: #bbb;
+    outline: 0;
+  }
+  form input:focus:invalid,
+  form textarea:focus:invalid {
+    color: #b94a48;
+    border-color: #e9322d;
+  }
+  form label {
+    margin-bottom: 3px;
+  }
+  .button {
+    display: inline-block;
+    font-family: inherit;
+    background-color: #13aff0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 14px 20px;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .button:hover,
+  .button:focus {
+    background-color: #0b7cac;
+    color: #fff;
+  }
+  button:focus {
+    outline: 0;
+  }
+  span.required {
+    position: relative;
+    top: -4px;
+    font-size: 10px;
+    margin-left: 3px;
+    color: red;
+  }
+}
+/*! CSS Used from: Embedded */
+div,
+span {
+  user-select: text !important;
+}
+::selection {
+  background-color: #338fff !important;
+  color: #fff !important;
+}
+
+/*disclaimer styles*/
+/*! CSS Used from: https://wpbackend.perceptiond.net/wp-content/themes/oceanwp/assets/css/style.min.css?ver=3.5.5 ; media=all */
+@media all {
+  span,
+  h2 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+  }
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  ::selection {
+    color: #fff;
+    background: #333;
+    text-shadow: none;
+  }
+  h2 {
+    font-weight: 600;
+    margin: 0 0 20px;
+    color: #333;
+    line-height: 1.4;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  @media print {
+    * {
+      background: rgba(0, 0, 0, 0) !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+    h2 {
+      orphans: 3;
+      widows: 3;
+    }
+    h2 {
+      page-break-after: avoid;
+    }
+  }
+}
+/*! CSS Used from: https://wpbackend.perceptiond.net/wp-content/uploads/oceanwp/custom-style.css?ver=6.5.3 ; media=all */
+@media all {
+  h2 {
+    color: #000000;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 30px;
+    color: #000000;
+    text-transform: capitalize;
+  }
+}
+/*! CSS Used from: Embedded */
+span {
+  user-select: text !important;
+}
+h2 {
+  cursor: auto;
+  user-select: text !important;
+}
+::selection {
+  background-color: #338fff !important;
+  color: #fff !important;
+}
+
+/*! CSS Used from: https://wpbackend.perceptiond.net/wp-content/themes/oceanwp/assets/css/style.min.css?ver=3.5.5 ; media=all */
+@media all {
+  p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+  }
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  ::selection {
+    color: #fff;
+    background: #333;
+    text-shadow: none;
+  }
+  p {
+    margin: 0 0 20px;
+  }
+  @media print {
+    * {
+      background: rgba(0, 0, 0, 0) !important;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+    p {
+      orphans: 3;
+      widows: 3;
+    }
+  }
+}
+/*! CSS Used from: Embedded */
+p {
+  user-select: text !important;
+}
+p {
+  cursor: auto;
+  user-select: text !important;
+}
+::selection {
+  background-color: #338fff !important;
+  color: #fff !important;
+}

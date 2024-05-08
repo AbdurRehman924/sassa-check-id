@@ -1,5 +1,8 @@
 <template>
-  <div class="mx-auto max-w-7xl my-3" v-html="data?.page.content"></div>
+  <div class="mx-auto max-w-7xl">
+    <h1>{{ data.page.title }}</h1>
+    <div class="my-3" v-html="data?.page.content"></div>
+  </div>
 </template>
 
 <script setup>
