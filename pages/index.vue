@@ -1,7 +1,9 @@
 <template>
+  <h1 class="text-center font-bold text-4xl py-8 bg-[#F5F5F5] font-OpenSans">
+    {{ data.page.title }}
+  </h1>
   <div class="mx-auto max-w-7xl">
-    <h1>{{ data.page.title }}</h1>
-    <div class="my-3" v-html="data?.page.content"></div>
+    <div class="my-3 font-OpenSans text-lg" v-html="data?.page.content"></div>
   </div>
 </template>
 

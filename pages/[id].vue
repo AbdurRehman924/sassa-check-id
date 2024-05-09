@@ -1,5 +1,7 @@
 <template>
-  <div class="mx-auto max-w-7xl my-3" v-html="data?.page.content"></div>
+  <div
+    class="mx-auto max-w-7xl my-3 font-OpenSans"
+    v-html="data?.page.content"></div>
 </template>
 
 <script setup>
