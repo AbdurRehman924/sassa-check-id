@@ -76,7 +76,6 @@ export const useGetData = () => {
     }
   };
   const fetchCategoryById = async (id) => {
-    console.log("🚀 ~ fetchCategoryById ~ id:", id);
     try {
       const { data } = await useFetch(config.public.wordpressUrl, {
         method: "get",
@@ -96,7 +95,10 @@ export const useGetData = () => {
           }`,
         },
         transform(data) {
-          return data.data.category;
+          return {
+            posts: data.data.category.posts.edges,
+            count: data.data.category.count,
+          };
         },
       });
       return data;
