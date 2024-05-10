@@ -1,4 +1,5 @@
 <template>
+  <SassaStatusForm />
   <div class="mx-auto max-w-7xl">
     <div class="my-3 font-OpenSans text-lg" v-html="data?.page.content"></div>
   </div>
