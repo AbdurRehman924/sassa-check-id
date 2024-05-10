@@ -52,6 +52,58 @@ export const useGetData = () => {
       console.error(error);
     }
   };
+  const fetchCategories = async () => {
+    try {
+      const { data } = await useFetch(config.public.wordpressUrl, {
+        method: "get",
+        query: {
+          query: `query NewQuery {
+            categories {
+              nodes {
+                id
+                name
+              }
+            }
+          }`,
+        },
+        transform(data) {
+          return data.data.categories.nodes;
+        },
+      });
+      return data;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  const fetchCategoryById = async (id) => {
+    console.log("🚀 ~ fetchCategoryById ~ id:", id);
+    try {
+      const { data } = await useFetch(config.public.wordpressUrl, {
+        method: "get",
+        query: {
+          query: `query NewQuery {
+            category(id: "${id}") {
+              count
+              posts {
+                edges {
+                  node {
+                    title
+                    content
+                  }
+                }
+              }
+            }
+          }`,
+        },
+        transform(data) {
+          return data.data.category;
+        },
+      });
+      return data;
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
-  return { fetchPages, fetchPageById };
+  return { fetchPages, fetchPageById, fetchCategories, fetchCategoryById };
 };
