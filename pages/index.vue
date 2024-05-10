@@ -1,7 +1,4 @@
 <template>
-  <h1 class="text-center font-bold text-4xl py-8 bg-[#F5F5F5] font-OpenSans">
-    {{ data.page.title }}
-  </h1>
   <div class="mx-auto max-w-7xl">
     <div class="my-3 font-OpenSans text-lg" v-html="data?.page.content"></div>
   </div>
@@ -9,29 +6,16 @@
 
 <script setup>
 import { defineProps } from "vue";
+
+const { fetchPages } = useGetData();
 const props = defineProps({
   pages: Object,
 });
 
-let indexPage = props.pages.find((page) => page.node.isFrontPage === true);
-const config = useRuntimeConfig();
-
-const { data } = await useFetch(config.public.wordpressUrl, {
-  method: "get",
-  query: {
-    query: `query GetPosts {
-  page (id:"${indexPage.node.id}"){
-      id
-      title
-      date
-      content
-  }
-}`,
-  },
-  transform(data) {
-    return data.data;
-  },
-});
+let indexPage = computed(() =>
+  props.pages.find((page) => page.node.isFrontPage === true)
+);
+const data = await fetchPages(indexPage.value.node.id);
 </script>
 <style>
 /* .wp-block-heading {

@@ -9,7 +9,7 @@
 import { defineProps } from "vue";
 import { useRoute } from "vue-router";
 
-const config = useRuntimeConfig();
+const { fetchPages } = useGetData();
 const route = useRoute();
 const params = toRefs(route.params);
 const props = defineProps({
@@ -23,25 +23,5 @@ const pageWithId = computed(() =>
   props.pages.find((page) => page.node.slug === lastElement.value)
 );
 
-const { data } = await useFetch(
-  config.public.wordpressUrl,
-  pageWithId.value
-    ? {
-        method: "get",
-        query: {
-          query: `query GetPosts {
-    page (id:"${pageWithId.value.node.id}"){
-        id
-        title
-        date
-        content
-    }
-  }`,
-        },
-        transform(data) {
-          return data.data;
-        },
-      }
-    : {}
-);
+const data = await fetchPages(pageWithId.value.node.id);
 </script>
