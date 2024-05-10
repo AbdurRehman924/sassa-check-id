@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="pageWithId"
+    v-if="selectedPageId"
     class="mx-auto max-w-7xl my-3 font-OpenSans"
     v-html="data?.page.content"></div>
 </template>
@@ -19,9 +19,12 @@ const props = defineProps({
 const lastElement = computed(
   () => params.slug.value[params.slug.value.length - 1]
 );
-const pageWithId = computed(() =>
-  props.pages.find((page) => page.node.slug === lastElement.value)
-);
+const selectedPageId = computed(() => {
+  const foundPage = props.pages.find(
+    (page) => page.node.slug === lastElement.value
+  );
+  return foundPage ? foundPage.node.id : null;
+});
 
-const data = await fetchPageById(pageWithId.value.node.id);
+const data = await fetchPageById(selectedPageId.value);
 </script>
