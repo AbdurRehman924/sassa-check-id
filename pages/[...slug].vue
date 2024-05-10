@@ -9,7 +9,7 @@
 import { defineProps } from "vue";
 import { useRoute } from "vue-router";
 
-const { fetchPages } = useGetData();
+const { fetchPageById } = useGetData();
 const route = useRoute();
 const params = toRefs(route.params);
 const props = defineProps({
@@ -23,5 +23,5 @@ const pageWithId = computed(() =>
   props.pages.find((page) => page.node.slug === lastElement.value)
 );
 
-const data = await fetchPages(pageWithId.value.node.id);
+const data = await fetchPageById(pageWithId.value.node.id);
 </script>

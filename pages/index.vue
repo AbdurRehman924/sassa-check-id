@@ -7,7 +7,7 @@
 <script setup>
 import { defineProps } from "vue";
 
-const { fetchPages } = useGetData();
+const { fetchPageById } = useGetData();
 const props = defineProps({
   pages: Object,
 });
@@ -15,7 +15,7 @@ const props = defineProps({
 let indexPage = computed(() =>
   props.pages.find((page) => page.node.isFrontPage === true)
 );
-const data = await fetchPages(indexPage.value.node.id);
+const data = await fetchPageById(indexPage.value.node.id);
 </script>
 <style>
 /* .wp-block-heading {
