@@ -6,21 +6,18 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue";
 import { useRoute } from "vue-router";
 
 const { fetchPageById } = useGetData();
 const route = useRoute();
 const params = toRefs(route.params);
-const props = defineProps({
-  pages: Object,
-});
+const allPages = inject("allPages");
 
 const lastElement = computed(
   () => params.slug.value[params.slug.value.length - 1]
 );
 const selectedPageId = computed(() => {
-  const foundPage = props.pages.find(
+  const foundPage = allPages.value.find(
     (page) => page.node.slug === lastElement.value
   );
   return foundPage ? foundPage.node.id : null;

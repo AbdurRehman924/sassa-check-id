@@ -5,15 +5,11 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue";
-
+const allPages = inject("allPages");
 const { fetchPageById } = useGetData();
-const props = defineProps({
-  pages: Object,
-});
 
 let indexPage = computed(() =>
-  props.pages.find((page) => page.node.isFrontPage === true)
+  allPages.value.find((page) => page.node.isFrontPage === true)
 );
 const data = await fetchPageById(indexPage.value.node.id);
 </script>
