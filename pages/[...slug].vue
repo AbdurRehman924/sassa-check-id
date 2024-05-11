@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="selectedPageId"
-    class="mx-auto max-w-7xl my-3 font-OpenSans"
+    class="mx-auto max-w-7xl my-3 font-OpenSans min-h-screen"
     v-html="data?.page.content"></div>
 </template>
 

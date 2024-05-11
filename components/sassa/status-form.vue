@@ -1,5 +1,6 @@
 <template>
-  <div class="w-full bg-[#F9C02C] mb-3 px-4 font-OpenSans text-lg">
+  <div
+    class="bg-slate-50 my-4 p-3 border-[1px] mx-auto max-w-2xl mb-3 px-4 font-OpenSans text-lg">
     <form @submit.prevent="checkStatus" v-if="!result">
       <label for="" class="font-bold font-OpenSans">ID Number</label>
       <input
@@ -21,7 +22,7 @@
       <div class="flex justify-center mt-2">
         <button
           type="submit"
-          class="text-white bg-[#000000] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#F7BE38]/50 me-2 mb-2">
+          class="text-white bg-[#000000] hover:bg-slate-300 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#F7BE38]/50 me-2 mb-2">
           Check Status
         </button>
       </div>
