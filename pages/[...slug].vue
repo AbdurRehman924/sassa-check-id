@@ -12,12 +12,10 @@ const { fetchPageById } = useGetData();
 const { fetchData } = useGetSeoData();
 
 const route = useRoute();
-const params = toRefs(route.params);
+const params = route.params;
 const allPages = inject("allPages");
 
-const lastElement = computed(
-  () => params.slug.value[params.slug.value.length - 1]
-);
+const lastElement = computed(() => params.slug[params.slug.length - 1]);
 const selectedPage = computed(() => {
   return allPages.value.find((page) => page.node.slug === lastElement.value);
 });
