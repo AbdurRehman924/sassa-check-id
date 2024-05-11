@@ -13,15 +13,15 @@ export const useGetSeoData = () => {
       const metas = $("meta")
         .toArray()
         .map((meta) => $(meta).attr());
-      const scripts = $("script")
-        .toArray()
-        .map((script) => {
-          const type = $(script).attr("type");
-          const content = $(script).html();
-          return { type, content };
-        });
+      // const scripts = $("script")
+      //   .toArray()
+      //   .map((script) => {
+      //     const type = $(script).attr("type");
+      //     const content = $(script).html();
+      //     return { type, content };
+      //   });
 
-      return { title, metas, scripts };
+      return { title, metas };
     } catch (error) {
       console.error(error);
     }

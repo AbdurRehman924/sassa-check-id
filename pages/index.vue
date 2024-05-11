@@ -16,14 +16,9 @@ let indexPage = computed(() =>
 );
 const data = await fetchPageById(indexPage.value.node.id);
 
-const { title, metas, scripts } = await fetchData(indexPage.value.node.slug);
+const { title, metas } = await fetchData(indexPage.value.node.slug);
 useHead({
   title,
   meta: metas.map((meta) => ({ ...meta, hid: meta.name || meta.property })),
-  script: scripts.map((script) => ({
-    type: script.type,
-    json: script.content,
-    hid: script.type,
-  })),
 });
 </script>
