@@ -9,6 +9,8 @@
 import { useRoute } from "vue-router";
 
 const { fetchPageById } = useGetData();
+const { fetchData } = useGetSeoData();
+
 const route = useRoute();
 const params = toRefs(route.params);
 const allPages = inject("allPages");
@@ -24,4 +26,20 @@ const selectedPageId = computed(() => {
 });
 
 const data = await fetchPageById(selectedPageId.value);
+
+const selectedPage = computed(() => {
+  return allPages.value.find((page) => page.node.slug === lastElement.value);
+});
+
+const { title, metas, scripts } = await fetchData(selectedPage.value.node.slug);
+
+useHead({
+  title,
+  meta: metas.map((meta) => ({ ...meta, hid: meta.name || meta.property })),
+  script: scripts.map((script) => ({
+    type: script.type,
+    json: script.content,
+    hid: script.type,
+  })),
+});
 </script>
