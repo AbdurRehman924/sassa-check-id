@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       wordpressUrl: "https://wpbackend.perceptiond.net/graphql",
+      domain: "https://wpbackend.perceptiond.net",
     },
   },
   css: ["@/assets/main.css"],
