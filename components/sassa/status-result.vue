@@ -1,7 +1,9 @@
 <template>
   <div class="mx-auto max-w-2xl my-3 font-OpenSans text-lg">
     <div class="flex justify-end">
-      <IconsCross class="w-8 h-8" @click="$emit('closeStatusResult')" />
+      <IconsCross
+        class="w-8 h-8 cursor-pointer"
+        @click="$emit('closeStatusResult')" />
     </div>
     <div v-if="data.appId">
       <h1 class="flex justify-center">Application {{ data.appId }}</h1>
