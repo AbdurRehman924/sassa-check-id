@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/devtools", "@nuxtjs/tailwindcss"],
+  modules: ["@nuxt/devtools", "@nuxtjs/tailwindcss", "@nuxtjs/seo"],
   runtimeConfig: {
     public: {
       wordpressUrl: "https://wpbackend.perceptiond.net/graphql",
@@ -9,4 +9,7 @@ export default defineNuxtConfig({
   },
   css: ["@/assets/main.css"],
   devtools: { enabled: true },
+  site: {
+    trailingSlash: true,
+  },
 });
