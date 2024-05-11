@@ -14,21 +14,4 @@ let indexPage = computed(() =>
 );
 const data = await fetchPageById(indexPage.value.node.id);
 </script>
-<style>
-/* .wp-block-heading {
-  font-size: 40px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
-
-.wp-block-table {
-  table,
-  th,
-  td {
-    border: 1px solid black;
-  }
-}
-#ez-toc-container {
-  background-color: gray;
-} */
-</style>
+<style></style>

@@ -1,0 +1,21 @@
+@import "./fonts/fonts.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer base {
+  p {
+    font-size: theme("fontSize.lg");
+    margin-bottom: theme("margin.5");
+  }
+}
+
+@layer utilities {
+  .wp-block-heading {
+    font-size: theme("fontSize.3xl");
+    font-weight: theme("fontWeight.semibold");
+    margin-bottom: theme("margin.5");
+  }
+}
