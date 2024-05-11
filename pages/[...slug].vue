@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="selectedPageId"
+    v-if="selectedPage"
     class="mx-auto max-w-7xl my-3 font-OpenSans min-h-screen"
     v-html="data?.page.content"></div>
 </template>
@@ -18,18 +18,11 @@ const allPages = inject("allPages");
 const lastElement = computed(
   () => params.slug.value[params.slug.value.length - 1]
 );
-const selectedPageId = computed(() => {
-  const foundPage = allPages.value.find(
-    (page) => page.node.slug === lastElement.value
-  );
-  return foundPage ? foundPage.node.id : null;
-});
-
-const data = await fetchPageById(selectedPageId.value);
-
 const selectedPage = computed(() => {
   return allPages.value.find((page) => page.node.slug === lastElement.value);
 });
+
+const data = await fetchPageById(selectedPage.value.node.id);
 
 const { title, metas, scripts } = await fetchData(selectedPage.value.node.slug);
 
