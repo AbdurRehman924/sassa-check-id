@@ -2,15 +2,15 @@
   <footer class="p-4 mx-auto text-white bg-black">
     <div class="py-3 mx-auto max-w-7xl">
       <div
-        v-for="item in allPages"
+        v-for="item in data"
         class="text-lg underline-offset-2"
-        :key="item.node.slug"
+        :key="item.node.id"
       >
-        <SiteLink
-          v-if="item.node.isFrontPage === false"
-          :to="`/${item.node.slug}`"
+        <NuxtLink
+          v-if="item.node.uri != '/'"
+          :to="item.node.uri"
           class="text-xl font-normal leading-8 font-OpenSans hover:text-blue-400"
-          >{{ item.node.title }}</SiteLink
+          >{{ item.node.title }}</NuxtLink
         >
         <hr class="max-w-sm" />
       </div>
@@ -19,6 +19,28 @@
 </template>
 
 <script setup>
-  import { inject } from "vue";
-  const allPages = inject("allPages");
+  const { wordpressUrl } = useAppConfig();
+  const nuxtApp = useNuxtApp();
+  const { data } = await useFetch(wordpressUrl, {
+    query: {
+      query: `query getPages {
+        pages {
+          edges {
+            node {
+              title
+              id
+              uri
+            }
+          }
+        }
+      }`,
+    },
+    transform(data) {
+      return data.data.pages.edges;
+    },
+    key: "pages",
+    getCachedData(key) {
+      return nuxtApp.payload.data[key] || nuxtApp.static.data[key];
+    },
+  });
 </script>
