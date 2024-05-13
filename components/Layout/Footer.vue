@@ -8,7 +8,7 @@
       >
         <SiteLink
           v-if="item.node.isFrontPage === false"
-          :to="item.node.slug"
+          :to="`/${item.node.slug}`"
           class="text-xl font-normal leading-8 font-OpenSans hover:text-blue-400"
           >{{ item.node.title }}</SiteLink
         >

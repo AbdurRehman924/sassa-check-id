@@ -1,5 +1,6 @@
 export const useGetData = () => {
   const config = useRuntimeConfig();
+  const nuxtApp = useNuxtApp();
   const fetchPages = async () => {
     try {
       const { data } = useFetch(config.public.wordpressUrl, {
@@ -23,6 +24,7 @@ export const useGetData = () => {
           return data.data.pages.edges;
         },
       });
+
       return data;
     } catch (error) {
       console.error(error);
@@ -45,6 +47,10 @@ export const useGetData = () => {
         },
         transform(data) {
           return data.data;
+        },
+        key: `page-${id}`,
+        getCachedData(key) {
+          return nuxtApp.payload.data[key] || nuxtApp.static.data[key];
         },
       });
       return data;
