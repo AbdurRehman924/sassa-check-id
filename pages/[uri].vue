@@ -14,7 +14,7 @@
           </NuxtLink>
           <div v-html="post.content"></div>
           <h2 class="mb-0">{{ post.title }}</h2>
-          <p>{{ new Date(post.date).toLocaleString() }}</p>
+          <p>{{ post.date }}</p>
         </div>
       </div>
     </div>
@@ -26,6 +26,7 @@ import { imagesRegex, wordpressUrl } from "~/utils/constants";
 
 const route = useRoute();
 const nuxtApp = useNuxtApp();
+const { $fetchSeoData } = useNuxtApp();
 const { imagesUrl } = useRuntimeConfig().public;
 const { data } = await useFetch(wordpressUrl, {
   query: {
@@ -114,5 +115,11 @@ const { data } = await useFetch(wordpressUrl, {
   getCachedData(key) {
     return nuxtApp.payload.data[key] || nuxtApp.static.data[key];
   },
+});
+
+const { title, metas } = await $fetchSeoData(route.params.uri);
+useHead({
+  title,
+  meta: metas.map((meta) => ({ ...meta, hid: meta.name || meta.property })),
 });
 </script>
