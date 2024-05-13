@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     public: {
       imagesUrl:
         process.env.NUXT_PUBLIC_IMAGES_PROXY || "http://localhost:3000/images",
+      domain: process.env.DOMAIN || "https://wpbackend.perceptiond.net",
     },
   },
   routeRules: {
