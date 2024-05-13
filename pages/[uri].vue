@@ -12,10 +12,11 @@
 </template>
 
 <script setup>
+  import { imagesRegex, wordpressUrl } from "~/utils/constants";
+
   const route = useRoute();
-  const { wordpressUrl } = useAppConfig();
   const nuxtApp = useNuxtApp();
-  const regex = /https:\/\/wpbackend\.perceptiond\.net\/wp-content/g;
+  const { imagesUrl } = useRuntimeConfig().public;
   const { data } = await useFetch(wordpressUrl, {
     query: {
       query: `
@@ -72,8 +73,8 @@
         data.data.nodeByUri.contentTypeName == "post"
       ) {
         const content = data.data.nodeByUri.content.replace(
-          regex,
-          "http://localhost:3000/images"
+          imagesRegex,
+          imagesUrl
         );
         return {
           ...data.data.nodeByUri,
@@ -88,12 +89,12 @@
             featuredImage: {
               ...post.featuredImage.node,
               sourceUrl: post.featuredImage.node.sourceUrl.replace(
-                regex,
-                "http://localhost:3000/images"
+                imagesRegex,
+                imagesUrl
               ),
               srcSet: post.featuredImage.node.srcSet.replace(
-                regex,
-                "http://localhost:3000/images"
+                imagesRegex,
+                imagesUrl
               ),
             },
           };

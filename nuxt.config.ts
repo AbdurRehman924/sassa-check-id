@@ -1,9 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ["@nuxt/devtools", "@nuxtjs/tailwindcss"],
-
-  appConfig: {
-    wordpressUrl: "https://wpbackend.perceptiond.net/graphql",
+  runtimeConfig: {
+    public: {
+      imagesUrl:
+        process.env.NUXT_PUBLIC_IMAGES_PROXY || "http://localhost:3000/images",
+    },
   },
   routeRules: {
     "/images/**": {

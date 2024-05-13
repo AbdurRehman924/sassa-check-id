@@ -19,7 +19,8 @@
 </template>
 
 <script setup>
-  const { wordpressUrl } = useAppConfig();
+  import { wordpressUrl } from "~/utils/constants";
+
   const nuxtApp = useNuxtApp();
   const { data } = await useFetch(wordpressUrl, {
     query: {
