@@ -14,7 +14,7 @@
           </NuxtLink>
           <div v-html="post.content"></div>
           <h2 class="mb-0">{{ post.title }}</h2>
-          <p>{{ post.date }}</p>
+          <p>{{ new Date(post.date).toLocaleString() }}</p>
         </div>
       </div>
     </div>
