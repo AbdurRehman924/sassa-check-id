@@ -2,7 +2,7 @@
   <div
     class="bg-slate-50 my-4 p-3 border-[1px] mx-auto max-w-2xl mb-3 px-4 font-OpenSans text-lg">
     <form @submit.prevent="checkStatus" v-if="!result">
-      <label for="" class="font-bold font-OpenSans">ID Number</label>
+      <label class="font-bold font-OpenSans">ID Number</label>
       <input
         type="text"
         id="id-number"
@@ -10,7 +10,7 @@
         placeholder="Id number"
         required
         v-model="id_number" />
-      <label for="" class="font-bold font-OpenSans">Phone Number</label>
+      <label class="font-bold font-OpenSans">Phone Number</label>
       <input
         type="text"
         id="phone-number"
