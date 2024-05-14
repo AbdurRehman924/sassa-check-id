@@ -3,9 +3,9 @@ export default defineNuxtConfig({
   modules: ["@nuxt/devtools", "@nuxtjs/tailwindcss"],
   runtimeConfig: {
     public: {
+      baseUrl: process.env.NUXT_PUBLIC_BASE_URL || "http://localhost:3000",
       imagesUrl:
         process.env.NUXT_PUBLIC_IMAGES_PROXY || "http://localhost:3000/images",
-      domain: process.env.DOMAIN || "https://wpbackend.perceptiond.net",
     },
   },
   routeRules: {

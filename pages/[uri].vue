@@ -24,13 +24,19 @@
 </template>
 
 <script setup>
-import { imagesRegex, wordpressUrl } from "~/utils/constants";
+import * as cheerio from "cheerio";
+import {
+  wordpressBaseUrl,
+  wordpressGraphqlUrl,
+  wordpressSEOUrl,
+  baseUrlRegex,
+  imagesRegex,
+} from "~/utils/constants";
 
 const route = useRoute();
 const nuxtApp = useNuxtApp();
-const { $fetchSeoData } = useNuxtApp();
-const { imagesUrl } = useRuntimeConfig().public;
-const { data } = await useFetch(wordpressUrl, {
+const { baseUrl, imagesUrl } = useRuntimeConfig().public;
+const { data } = await useFetch(wordpressGraphqlUrl, {
   query: {
     query: `
       query getPageByUri {
@@ -119,7 +125,29 @@ const { data } = await useFetch(wordpressUrl, {
   },
 });
 
-const { title, metas } = await $fetchSeoData(route.params.uri);
+const { data: seo } = await useFetch(
+  `${wordpressSEOUrl}?url=${wordpressBaseUrl}/${route.params.uri}/`,
+  {
+    transform(data) {
+      return {
+        head: data.head
+          .replace(imagesRegex, imagesUrl)
+          .replace(baseUrlRegex, baseUrl),
+      };
+    },
+    key: `SEO_${route.params.uri}`,
+    getCachedData(key) {
+      return nuxtApp.payload.data[key] || nuxtApp.static.data[key];
+    },
+  },
+);
+
+const $ = cheerio.load(seo.value.head);
+const title = $("title").text();
+const metas = $("meta")
+  .toArray()
+  .map((meta) => $(meta).attr());
+
 useHead({
   title,
   meta: metas.map((meta) => ({ ...meta, hid: meta.name || meta.property })),

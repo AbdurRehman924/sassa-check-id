@@ -19,10 +19,10 @@
 </template>
 
 <script setup>
-import { wordpressUrl } from "~/utils/constants";
+import { wordpressGraphqlUrl } from "~/utils/constants";
 
 const nuxtApp = useNuxtApp();
-const { data } = await useFetch(wordpressUrl, {
+const { data } = await useFetch(wordpressGraphqlUrl, {
   query: {
     query: `query getPages {
         pages {
