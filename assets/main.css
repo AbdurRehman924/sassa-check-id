@@ -165,6 +165,7 @@ form textarea {
   p {
     font-size: theme("fontSize.lg");
     margin-bottom: theme("margin.5");
+    word-break: break-all;
   }
   h3 {
     font-size: theme("fontSize.2xl");
@@ -180,6 +181,7 @@ form textarea {
     font-size: theme("fontSize.4xl");
     font-weight: theme("fontWeight.bold");
     margin-bottom: theme("margin.5");
+    line-height: 40px;
   }
   ul {
     list-style: theme("listStyleType.disc");
@@ -188,6 +190,11 @@ form textarea {
     list-style: theme("listStyleType.decimal");
     margin-bottom: theme("margin[0.5]");
   }
+
+  a {
+    word-break: break-all;
+  }
+
   a:hover {
     color: blue;
   }

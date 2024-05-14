@@ -1,6 +1,6 @@
 <template>
   <SassaStatusForm />
-  <div class="mx-auto max-w-7xl">
+  <div class="mx-auto max-w-7xl px-6">
     <h1 class="text-center">{{ data.title }}</h1>
     <div class="my-3 text-lg font-OpenSans" v-html="data.content"></div>
   </div>

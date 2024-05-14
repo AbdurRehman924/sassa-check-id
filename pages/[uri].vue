@@ -2,10 +2,10 @@
   <div>
     <div
       v-if="data.contentTypeName == 'page' || data.contentTypeName == 'post'"
-      class="min-h-screen mx-auto my-3 max-w-7xl font-OpenSans"
+      class="min-h-screen mx-auto my-3 max-w-7xl font-OpenSans px-6"
       v-html="data.content"></div>
     <div v-else>
-      <div v-if="data.posts" class="max-w-7xl mx-auto mt-3 mb-3">
+      <div v-if="data.posts" class="max-w-7xl mx-auto mt-3 mb-3 px-6">
         <div v-for="post in data.posts" :key="post.uri">
           <NuxtLink :to="post.uri">
             <img

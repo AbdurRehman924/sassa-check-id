@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-2xl my-3 font-OpenSans text-lg">
+  <div class="mx-auto max-w-2xl my-3 font-OpenSans text-lg px-4">
     <div class="flex justify-end">
       <IconsCross
         class="w-8 h-8 cursor-pointer"
@@ -8,40 +8,112 @@
     <div v-if="data.appId">
       <h1 class="flex justify-center">Application {{ data.appId }}</h1>
       <div v-for="item in sortedData" class="my-2">
-        <div
-          v-if="item.outcome == 'approved'"
-          class="bg-green-500 rounded-md p-2">
-          <p>
-            {{ item.period }}
-            {{ item.outcome }}
-          </p>
-          <p>
-            Your application has been approved and your pay day is
-            {{ item.payday }} , {{ item.period }}.
-          </p>
+        <div v-if="item.outcome == 'approved'">
+          <Disclosure as="div" class="pt-6" v-slot="{ open }">
+            <dt>
+              <DisclosureButton
+                class="flex w-full items-start justify-between text-left text-gray-900">
+                <span class="text-base font-semibold leading-7">{{
+                  item.period
+                }}</span>
+                <span class="ml-6 flex h-7 items-center">
+                  <PlusSmallIcon
+                    v-if="!open"
+                    class="h-6 w-6"
+                    aria-hidden="true" />
+                  <MinusSmallIcon v-else class="h-6 w-6" aria-hidden="true" />
+                </span>
+              </DisclosureButton>
+            </dt>
+            <DisclosurePanel as="dd" class="mt-2 pr-12">
+              <ul class="list-none">
+                <li>
+                  <span class="font-bold mr-2">Outcome: </span>
+                  {{ item.outcome }}
+                </li>
+                <li>
+                  <span class="font-bold mr-2">Payday: </span>{{ item.payday }}
+                </li>
+                <li>
+                  <span class="font-bold mr-2">Filed:</span>
+
+                  {{ item.period }}
+                </li>
+              </ul>
+            </DisclosurePanel>
+          </Disclosure>
         </div>
 
-        <div
-          v-else-if="item.outcome == 'declined'"
-          class="bg-red-400 rounded-md p-2">
-          <p>
-            {{ item.period }}
-            {{ item.outcome }}
-          </p>
-          <p>
-            Your application has been declined , reason:
-            {{ item.reason }}.
-          </p>
+        <div v-else-if="item.outcome == 'declined'">
+          <Disclosure as="div" class="pt-6" v-slot="{ open }">
+            <dt>
+              <DisclosureButton
+                class="flex w-full items-start justify-between text-left text-gray-900">
+                <span class="text-base font-semibold leading-7">{{
+                  item.period
+                }}</span>
+                <span class="ml-6 flex h-7 items-center">
+                  <PlusSmallIcon
+                    v-if="!open"
+                    class="h-6 w-6"
+                    aria-hidden="true" />
+                  <MinusSmallIcon v-else class="h-6 w-6" aria-hidden="true" />
+                </span>
+              </DisclosureButton>
+            </dt>
+            <DisclosurePanel as="dd" class="mt-2 pr-12">
+              <ul class="list-none">
+                <li>
+                  <span class="font-bold mr-2">Outcome: </span>
+                  {{ item.outcome }}
+                </li>
+                <li v-if="item.payday">
+                  <span class="font-bold mr-2">Payday: </span>{{ item.payday }}
+                </li>
+                <li>
+                  <span class="font-bold mr-2">Filed:</span>
+
+                  {{ item.period }}
+                </li>
+              </ul>
+            </DisclosurePanel>
+          </Disclosure>
         </div>
 
-        <div
-          v-else-if="item.outcome == 'pending'"
-          class="bg-gray-400 rounded-md p-2">
-          <p>
-            {{ item.period }}
-            {{ item.outcome }}
-          </p>
-          <p>Your application is still pending.</p>
+        <div v-else-if="item.outcome == 'pending'">
+          <Disclosure as="div" class="pt-6" v-slot="{ open }">
+            <dt>
+              <DisclosureButton
+                class="flex w-full items-start justify-between text-left text-gray-900">
+                <span class="text-base font-semibold leading-7">{{
+                  item.period
+                }}</span>
+                <span class="ml-6 flex h-7 items-center">
+                  <PlusSmallIcon
+                    v-if="!open"
+                    class="h-6 w-6"
+                    aria-hidden="true" />
+                  <MinusSmallIcon v-else class="h-6 w-6" aria-hidden="true" />
+                </span>
+              </DisclosureButton>
+            </dt>
+            <DisclosurePanel as="dd" class="mt-2 pr-12">
+              <ul class="list-none">
+                <li>
+                  <span class="font-bold mr-2">Outcome: </span>
+                  {{ item.outcome }}
+                </li>
+                <li v-if="item.payday">
+                  <span class="font-bold mr-2">Payday: </span>{{ item.payday }}
+                </li>
+                <li>
+                  <span class="font-bold mr-2">Filed:</span>
+
+                  {{ item.period }}
+                </li>
+              </ul>
+            </DisclosurePanel>
+          </Disclosure>
         </div>
       </div>
     </div>
@@ -61,10 +133,12 @@
   </div>
 </template>
 <script setup>
+import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
+import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/vue/24/outline";
+
 const props = defineProps({
   data: Object,
 });
-
 let sortedData = ref([...props.data.outcomes]);
 sortedData.value.sort((a, b) => {
   const dateA = new Date(a.filed);
