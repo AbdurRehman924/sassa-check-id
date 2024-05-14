@@ -72,8 +72,8 @@
                   <span class="mr-2 font-bold">Outcome: </span>
                   {{ item.outcome }}
                 </li>
-                <li v-if="item.payday">
-                  <span class="mr-2 font-bold">Payday: </span>{{ item.payday }}
+                <li v-if="item.reason">
+                  <span class="mr-2 font-bold">Reason: </span>{{ item.reason }}
                 </li>
                 <li v-else>
                   <span class="mr-2 font-bold">Payday: </span> Not available
