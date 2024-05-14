@@ -7,7 +7,7 @@
     </div>
     <div v-if="data.appId">
       <h1 class="flex justify-center">Application {{ data.appId }}</h1>
-      <div v-for="item in sortedData" class="my-2">
+      <div v-for="item in sorted_data" class="my-2">
         <div v-if="item.outcome == 'approved'">
           <Disclosure as="div" class="pt-6" v-slot="{ open }">
             <dt>
@@ -70,6 +70,9 @@
                 <li v-if="item.payday">
                   <span class="font-bold mr-2">Payday: </span>{{ item.payday }}
                 </li>
+                <li v-else>
+                  <span class="font-bold mr-2">Payday: </span> Not available
+                </li>
                 <li>
                   <span class="font-bold mr-2">Filed:</span>
 
@@ -106,6 +109,9 @@
                 <li v-if="item.payday">
                   <span class="font-bold mr-2">Payday: </span>{{ item.payday }}
                 </li>
+                <li v-else>
+                  <span class="font-bold mr-2">Payday: </span> Not available
+                </li>
                 <li>
                   <span class="font-bold mr-2">Filed:</span>
 
@@ -139,17 +145,29 @@ import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/vue/24/outline";
 const props = defineProps({
   data: Object,
 });
-let sortedData = ref([...props.data.outcomes]);
-sortedData.value.sort((a, b) => {
-  const dateA = new Date(a.filed);
-  const dateB = new Date(b.filed);
 
-  if (dateA > dateB) {
+let sorted_data = ref(props.data.outcomes);
+sorted_data.value.sort((a, b) => {
+  const [month_a, year_a] = a.period.split(/(\d+)/).filter(Boolean);
+  const [month_b, year_b] = b.period.split(/(\d+)/).filter(Boolean);
+
+  const month_number_a =
+    new Date(Date.parse(month_a + " 1, 2012")).getMonth() + 1;
+  const month_number_b =
+    new Date(Date.parse(month_b + " 1, 2012")).getMonth() + 1;
+
+  if (year_a > year_b) {
     return -1;
-  } else if (dateA < dateB) {
+  } else if (year_a < year_b) {
     return 1;
   } else {
-    return 0;
+    if (month_number_a > month_number_b) {
+      return -1;
+    } else if (month_number_a < month_number_b) {
+      return 1;
+    } else {
+      return 0;
+    }
   }
 });
 </script>
