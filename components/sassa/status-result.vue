@@ -7,7 +7,7 @@
     </div>
     <div v-if="data.appId">
       <h1 class="flex justify-center">Application {{ data.appId }}</h1>
-      <div v-for="item in data.outcomes" class="my-2">
+      <div v-for="item in sortedData" class="my-2">
         <div
           v-if="item.outcome == 'approved'"
           class="bg-green-500 rounded-md p-2">
@@ -63,5 +63,19 @@
 <script setup>
 const props = defineProps({
   data: Object,
+});
+
+let sortedData = ref([...props.data.outcomes]);
+sortedData.value.sort((a, b) => {
+  const dateA = new Date(a.filed);
+  const dateB = new Date(b.filed);
+
+  if (dateA > dateB) {
+    return -1;
+  } else if (dateA < dateB) {
+    return 1;
+  } else {
+    return 0;
+  }
 });
 </script>
