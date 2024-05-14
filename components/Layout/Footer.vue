@@ -19,12 +19,12 @@
 </template>
 
 <script setup>
-  import { wordpressUrl } from "~/utils/constants";
+import { wordpressUrl } from "~/utils/constants";
 
-  const nuxtApp = useNuxtApp();
-  const { data } = await useFetch(wordpressUrl, {
-    query: {
-      query: `query getPages {
+const nuxtApp = useNuxtApp();
+const { data } = await useFetch(wordpressUrl, {
+  query: {
+    query: `query getPages {
         pages {
           edges {
             node {
@@ -35,13 +35,13 @@
           }
         }
       }`,
-    },
-    transform(data) {
-      return data.data.pages.edges;
-    },
-    key: "pages",
-    getCachedData(key) {
-      return nuxtApp.payload.data[key] || nuxtApp.static.data[key];
-    },
-  });
+  },
+  transform(data) {
+    return data.data.pages.edges;
+  },
+  key: "pages",
+  getCachedData(key) {
+    return nuxtApp.payload.data[key] || nuxtApp.static.data[key];
+  },
+});
 </script>

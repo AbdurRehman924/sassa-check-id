@@ -7,13 +7,13 @@
 </template>
 
 <script setup>
-import { wordpressUrl, imagesRegex } from "~/utils/constants";
-const { imagesUrl } = useRuntimeConfig().public;
-const nuxtApp = useNuxtApp();
-const { $fetchSeoData } = useNuxtApp();
-const { data } = await useFetch(wordpressUrl, {
-  query: {
-    query: `query getIndexPage {
+  import { wordpressUrl, imagesRegex } from "~/utils/constants";
+  const { imagesUrl } = useRuntimeConfig().public;
+  const nuxtApp = useNuxtApp();
+  const { $fetchSeoData } = useNuxtApp();
+  const { data } = await useFetch(wordpressUrl, {
+    query: {
+      query: `query getIndexPage {
       nodeByUri(uri: "/"){
         ... on Page{
           id
@@ -23,23 +23,26 @@ const { data } = await useFetch(wordpressUrl, {
         }
       }
     }`,
-  },
-  transform(data) {
-    const content = data.data.nodeByUri.content.replace(imagesRegex, imagesUrl);
-    return {
-      ...data.data.nodeByUri,
-      content,
-    };
-  },
-  key: "indexPage",
-  getCachedData(key) {
-    return nuxtApp.payload.data[key] || nuxtApp.static.data[key];
-  },
-});
+    },
+    transform(data) {
+      const content = data.data.nodeByUri.content.replace(
+        imagesRegex,
+        imagesUrl
+      );
+      return {
+        ...data.data.nodeByUri,
+        content,
+      };
+    },
+    key: "indexPage",
+    getCachedData(key) {
+      return nuxtApp.payload.data[key] || nuxtApp.static.data[key];
+    },
+  });
 
-const { title, metas } = await $fetchSeoData("/");
-useHead({
-  title,
-  meta: metas.map((meta) => ({ ...meta, hid: meta.name || meta.property })),
-});
+  const { title, metas } = await $fetchSeoData("/");
+  useHead({
+    title,
+    meta: metas.map((meta) => ({ ...meta, hid: meta.name || meta.property })),
+  });
 </script>

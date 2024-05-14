@@ -11,7 +11,7 @@ export default defineNuxtPlugin(() => {
           getCachedData(key) {
             return nuxtApp.payload.data[key] || nuxtApp.static.data[key];
           },
-        }
+        },
       );
 
       const $ = cheerio.load(response.data.value.head);

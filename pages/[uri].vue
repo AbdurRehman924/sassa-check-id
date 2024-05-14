@@ -2,15 +2,17 @@
   <div>
     <div
       v-if="data.contentTypeName == 'page' || data.contentTypeName == 'post'"
-      class="min-h-screen mx-auto my-3 max-w-7xl font-OpenSans px-6"
-      v-html="data.content"></div>
+      class="min-h-screen px-6 mx-auto my-3 max-w-7xl font-OpenSans"
+      v-html="data.content"
+    ></div>
     <div v-else>
-      <div v-if="data.posts" class="max-w-7xl mx-auto mt-3 mb-3 px-6">
+      <div v-if="data.posts" class="px-6 mx-auto mt-3 mb-3 max-w-7xl">
         <div v-for="post in data.posts" :key="post.uri">
           <NuxtLink :to="post.uri">
             <img
               :src="post.featuredImage.sourceUrl"
-              :alt="post.featuredImage.altText" />
+              :alt="post.featuredImage.altText"
+            />
           </NuxtLink>
           <div v-html="post.content"></div>
           <h2 class="mb-0">{{ post.title }}</h2>
@@ -85,7 +87,7 @@ const { data } = await useFetch(wordpressUrl, {
     ) {
       const content = data.data.nodeByUri.content.replace(
         imagesRegex,
-        imagesUrl
+        imagesUrl,
       );
       return {
         ...data.data.nodeByUri,
@@ -101,11 +103,11 @@ const { data } = await useFetch(wordpressUrl, {
             ...post.featuredImage.node,
             sourceUrl: post.featuredImage.node.sourceUrl.replace(
               imagesRegex,
-              imagesUrl
+              imagesUrl,
             ),
             srcSet: post.featuredImage.node.srcSet.replace(
               imagesRegex,
-              imagesUrl
+              imagesUrl,
             ),
           },
         };

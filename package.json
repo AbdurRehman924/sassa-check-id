@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "format": "prettier ."
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.22",
@@ -21,6 +22,7 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^1.2.0"
+    "@nuxt/devtools": "^1.2.0",
+    "prettier": "^3.2.5"
   }
 }
