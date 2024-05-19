@@ -26,8 +26,6 @@
 </template>
 
 <script setup>
-import * as cheerio from "cheerio";
-
 const nuxtApp = useNuxtApp();
 const route = useRoute();
 
@@ -51,15 +49,6 @@ const { data } = await useAsyncData(
 if (!data.value) {
   throw createError({ statusCode: 404, message: "404-Page Not Found" });
 } else {
-  const $ = cheerio.load(data.value[1].head);
-  const title = $("title").text();
-  const metas = $("meta")
-    .toArray()
-    .map((meta) => $(meta).attr());
-
-  useHead({
-    title,
-    meta: metas.map((meta) => ({ ...meta, hid: meta.name || meta.property })),
-  });
+  addMetaTags(data.value[1].head);
 }
 </script>
