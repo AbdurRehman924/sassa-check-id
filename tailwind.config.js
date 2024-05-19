@@ -11,5 +11,10 @@ module.exports = {
     fontFamily: {
       OpenSans: ["OpenSans"],
     },
+    extend: {
+      colors: {
+        sassa: "#F9C02C",
+      },
+    },
   },
 };
