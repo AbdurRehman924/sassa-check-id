@@ -1,4 +1,8 @@
-export default (pageUri) =>
+import type { Page, Category } from "~/types";
+
+export default (
+  pageUri: string,
+): Promise<{ data: { nodeByUri: Page | Category } }> =>
   $fetch(wordpressGraphqlUrl, {
     query: {
       query: `

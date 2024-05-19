@@ -1,6 +1,6 @@
 import * as cheerio from "cheerio";
 
-export default (tags) => {
+export default (tags: string) => {
   const $ = cheerio.load(tags);
   const title = $("title").text();
   const metas = $("meta")
@@ -9,6 +9,6 @@ export default (tags) => {
 
   useHead({
     title,
-    meta: metas.map((meta) => ({ ...meta, hid: meta.name || meta.property })),
+    meta: metas.map((meta) => ({ ...meta, hid: meta?.name || meta?.property })),
   });
 };

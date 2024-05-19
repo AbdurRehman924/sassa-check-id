@@ -25,22 +25,21 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const nuxtApp = useNuxtApp();
 const route = useRoute();
 
-const uri = route.params.uri.join("/");
+const uri = (route.params.uri as string[]).join("/");
 
 const { baseUrl, imagesUrl } = useRuntimeConfig().public;
 
 const transform = dataTransform(baseUrl, imagesUrl);
 
 const { data } = await useAsyncData(
-  `getPageAndSeoData-${uri}`,
+  `getPageAndSeoDataFor${uri}`,
   () => Promise.all([getPageData(uri), getSeoData(uri)]),
   {
     transform: transform,
-    key: uri,
     getCachedData(key) {
       return nuxtApp.payload.data[key] || nuxtApp.static.data[key];
     },

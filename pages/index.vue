@@ -6,7 +6,9 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import type { Page } from "~/types";
+
 const { baseUrl, imagesUrl } = useRuntimeConfig().public;
 const nuxtApp = useNuxtApp();
 
@@ -15,7 +17,7 @@ const { data } = await useAsyncData(
   () => Promise.all([getPageData("/"), getSeoData("/")]),
   {
     transform([pageResponse, seoResponse]) {
-      const content = pageResponse.data.nodeByUri.content.replace(
+      const content = (pageResponse.data.nodeByUri as Page).content.replace(
         imagesRegex,
         imagesUrl,
       );
@@ -33,7 +35,6 @@ const { data } = await useAsyncData(
         },
       ];
     },
-    key: "indexPage",
     getCachedData(key) {
       return nuxtApp.payload.data[key] || nuxtApp.static.data[key];
     },
